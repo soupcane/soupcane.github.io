@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     padding: 0px;
-    margin-inline: 10vw;
+    margin-inline: 15vw;
 }
 
 /* Add a black background color to the top navigation */
@@ -60,10 +60,11 @@ img {
     background-color: rgba(0, 0, 0, 0.1);
     padding-left: 10px;
 }
+
 .infobox {
   display: block;
   overflow: auto;
-  width: fit-content;
+  width: 25vw;
   padding-left: 5px;
   margin-top: 5px;
   background-color: white;
@@ -72,20 +73,18 @@ img {
 }
 
 /*Info lista */
-dt, dd{
-  float: left;
+tr td{
+  text-indent: 5px;
 }
-dt{
-  clear:both;
-  font-weight: bold
+tr td[scope="row"] {
+  font-weight: bold;
 }
-dt span{
-  display: inline-block;
-  width: 70px;
+tr:nth-of-type(odd) td {
+  background-color: #eeeeee83;
 }
-dd span{
-  display: inline-block;
-  margin-right: 5px;
+
+a{
+  color: #f4f4f4
 }
 
 .gallery{
@@ -101,4 +100,15 @@ dd span{
 
 .side-gallery-image{
     height: 250px;
+}
+
+@media screen and (max-width: 1400px) {
+  div.infobox{
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div.infobox{
+    width: 60vw;
+  }
 }
