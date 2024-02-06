@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     padding: 0px;
-    margin-inline: 15vw;
+    margin-inline: 10vw;
 }
 
 /* Add a black background color to the top navigation */
@@ -21,16 +21,22 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #04a72d;
     color: black;
+    transform: scale(1.2);
   }
   /* Add a color to the active/current link */
   .topnav a.active {
     background-color: #04a72d;
     color: white;
+}
+
+.scrollDownButton{
+  scroll-behavior: smooth;
 }
 
 main {
@@ -50,7 +56,7 @@ main {
 .image{
   background-color: aliceblue;
 }
-img {
+.imga {
   position: relative;
   width: 100%;
 }
@@ -60,96 +66,67 @@ img {
     background-color: rgba(0, 0, 0, 0.1);
     padding-left: 10px;
 }
-
-.Systematik{
-  display: flex;
-  flex-direction: row;
-}
-
-.SystematikBox {
+.infobox {
   display: block;
   overflow: auto;
-  width: 35vw;
-  height: fit-content;
-  font-size: 18px;
+  width: fit-content;
   padding-left: 5px;
-  margin-block: 10px;
+  margin-top: 5px;
+  background-color: white;
   border-radius: 5px;
-  margin-right: 10px;
-}
-
-.SystematikTable{
-  padding: 5px;
-  width: 100%;
-}
-.SystematikTbody{
-  border-style: solid;
-  border-color: white;
-}
-
-.slothEat{
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /*Info lista */
-tr td{
-  text-indent: 5px;
+dt, dd{
+  float: left;
 }
-tr td[scope="row"] {
-  font-weight: bold;
+dt{
+  clear:both;
+  font-weight: bold
 }
-tr:nth-of-type(odd) td {
-  background-color:rgba(255, 255, 255, 0.801);
+dt span{
+  display: inline-block;
+  width: 70px;
+}
+dd span{
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .gallery{
-    display: flex;
-    flex-wrap: nowrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  padding-top: 20px;
 }
 
-.main-gallery-image{
-    height: 500px;
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
 }
 
-.side-gallery-image{
-    height: 250px;
+.image-box {
+  position: relative;
 }
 
-.Distribution{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.image-box:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
 }
 
-.DistributionInfo{
-  display: flex;
-  flex-direction: row;
+.image-box:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.DistributionTable{
-  margin-right: 10px;
-  padding: 5px;
-  font-size: 18px;
-}
-
-.DistributionImg{
-  width: 25vw;
-}
-
-@media screen and (max-width: 1600px) {
-  img.slothEat{
-    margin-top: 30%;
-  }
-  div.infobox{
-    width: 40vw;
-  }
-}
-@media screen and (max-width: 1000px) {
-  div.infobox{
-    width: 60vw;
-  }
+.image-box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
 }
