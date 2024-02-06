@@ -61,15 +61,36 @@ img {
     padding-left: 10px;
 }
 
-.infobox {
+.Systematik{
+  display: flex;
+  flex-direction: row;
+}
+
+.SystematikBox {
   display: block;
   overflow: auto;
-  width: 25vw;
+  width: 35vw;
+  height: fit-content;
+  font-size: 18px;
   padding-left: 5px;
-  margin-top: 5px;
-  background-color: white;
+  margin-block: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.SystematikTable{
+  padding: 5px;
+  width: 100%;
+}
+.SystematikTbody{
+  border-style: solid;
+  border-color: white;
+}
+
+.slothEat{
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 /*Info lista */
@@ -80,11 +101,7 @@ tr td[scope="row"] {
   font-weight: bold;
 }
 tr:nth-of-type(odd) td {
-  background-color: #eeeeee83;
-}
-
-a{
-  color: #f4f4f4
+  background-color:rgba(255, 255, 255, 0.801);
 }
 
 .gallery{
@@ -102,7 +119,31 @@ a{
     height: 250px;
 }
 
-@media screen and (max-width: 1400px) {
+.Distribution{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.DistributionInfo{
+  display: flex;
+  flex-direction: row;
+}
+
+.DistributionTable{
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.DistributionImg{
+  width: 25vw;
+}
+
+@media screen and (max-width: 1600px) {
+  img.slothEat{
+    margin-top: 30%;
+  }
   div.infobox{
     width: 40vw;
   }
