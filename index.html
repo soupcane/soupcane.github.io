@@ -9,9 +9,9 @@
     <body>
         <header>
             <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="#textbox">News</a>
-                <a href="#infobox">Contact</a>
+                <a href="#TextBox">Genrel info</a>
+                <a href="#gallery">News</a>
+                <a href="#Gallery" class="scrollDownButton">Gallery</a>
                 <a href="#about">About</a>
               </div> 
         </header>
@@ -26,7 +26,8 @@
                     </h1>
                 </div>
 
-                <div class="textbox">
+                <div class="textbox" id="TextBox" >
+                    <a href="textbox"></a>
                     <p class="text1">
                         Sengångare är unika på många sätt. De tillbringar i stort sett hela sitt liv hängande upp och ned i sina kraftiga krökta klor. De äter, sover, parar sig och föder sina ungar i den ställningen. För att kunna klara av detta bildar klorna kraftiga klätterhakar och pälsen växer åt ”fel” håll för att leda undan regnvattnet.
                         <br><br>
@@ -44,88 +45,55 @@
                     </p> 
                 </div>
             </section>
-            
-            <div class="Systematik">
-                <div>
-                    <div class="SystematikHeader">
-                        <h1>Systematik</h1>
-                    </div>
-                    <div class="SystematikBox" >
-                        <table class="SystematikTable">
-                            <tbody class="SystematikTbody">
-                                <tr>
-                                    <td scope="row">Rike</td>
-                                    <td>Djur</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Stam</td>
-                                    <td>Ryggsträngsdjur</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Understam</td>
-                                    <td>Ryggraddsdjur</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Ordning</td>
-                                    <td>Håriga trögdjur</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Familj</td>
-                                    <td>Tretåiga sengångare</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Släkte</td>
-                                    <td>Tretåiga sengångare</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Art</td>
-                                    <td>Bradypus tridactylus</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <section>
-                    <div>
-                        <img class="slothEat" src="images/SlothEat.jpg">
-                        <p style="font-style: italic; ">Image by Christian Mehlführer <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a></p>
-                    </div>
-                </section>
+
+            <div class="infobox" id="Systematik">
+                <dl>
+                    <dt><span>Rike</span></dt>      <dd><span>Djur</span></dd>
+                    <dt><span>Stam</span></dt>      <dd><span>Ryggsträngsdjur</span></dd>
+                    <dt><span>Understam</span></dt> <dd><span>Ryggraddsdjur</span></dd>
+                    <dt><span>Ordning</span></dt>     <dd><span>Håriga trögdjur</span></dd>
+                    <dt><span>Familj</span></dt>     <dd><span>Tretåiga sengångare</span></dd>
+                    <dt><span>Släkte</span></dt>     <dd><span>Tretåiga sengångare</span></dd>
+                    <dt><span>Arter</span></dt>     <dd><span>Bradypus tridactylus</span></dd>
+                </dl> 
             </div>
 
             <section>
-                <div class="Distribution">
-                    <h1 style="font-size: 32px">Distribution</h1>
-                    <div class="DistributionInfo">
-                        <table class="DistributionTable" style="width: 100%;">
-                            <tbody class="DistributionTbody">
-                                <tr>
-                                    <td scope="row">Kontinenter</td>
-                                    <td>Sydamerika</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Länder</td>
-                                    <td>Brasilien, Guyana, Surinam, Venezuela</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Regioner</td>
-                                    <td>Amapá, Amazonas (delstat i Brasilien), Pará, Roraima</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Biogeografiska områden</td>
-                                    <td>Neotropiska regionen</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">WWF-biomer</td>
-                                    <td>Tropiska fuktiga skogar</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <img class="DistributionImg" src="./images/SlothDistribution.webp">
+                <div>
+                    <div class="row">
+                        <div class="main-gallery-image">
+                            <img src="images/sloth-site-image1.jpg" alt="sloth image">
+                        </div>
+                        <div></div>
                     </div>
                 </div>
             </section>
 
+            <section class="gallery" id="Gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-container">
+
+                    <div class="image-box">
+                      <img src="images/experts-say-sloths-app.jpg" alt="Image 1">
+                    </div>
+                  
+                    <div class="image-box">
+                      <img src="images/babysloth.webp" alt="Image 2">
+                    </div>
+                  
+                    <div class="image-box">
+                      <img src="images/sloth-site-image1.jpg" alt="Image 3">
+                    </div>
+                
+                    <div class="image-box">
+                        <img src="images/plafs.jpg" alt="image 4">
+                    </div>
+                  
+                    <!-- Add more images here -->
+                  </div>
+        
+                  <script src="script.js"></script>
+            </section>
         </main>
         <footer>
             <p>&copy; 2023 Vår Webbsida. Alla rättigheter inte förbehållna.</p>
