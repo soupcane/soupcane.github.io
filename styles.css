@@ -5,10 +5,13 @@ body {
     background-color: #f4f4f4;
     color: #333;
     padding: 0px;
-    margin-inline: 15vw;
-}
+    margin-inline: 10vw;}
 
 /* Add a black background color to the top navigation */
+main {
+  margin: 20px 0;
+}
+
 .topnav {
   background-color: #683903;
   overflow: hidden;
@@ -21,11 +24,13 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #04a72d;
     color: black;
+    transform: scale(1.2);
   }
   /* Add a color to the active/current link */
   .topnav a.active {
@@ -33,8 +38,8 @@ body {
     color: white;
 }
 
-main {
-  margin: 20px 0;
+.scrollDownButton{
+  scroll-behavior: smooth;
 }
 
 .content {
@@ -50,10 +55,6 @@ main {
 .image{
   background-color: aliceblue;
 }
-img {
-  position: relative;
-  width: 100%;
-}
 
 .textbox {
     width: 100%;
@@ -64,6 +65,7 @@ img {
 .Systematik{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .SystematikBox {
@@ -89,7 +91,7 @@ img {
 
 .slothEat{
   margin-top: 10px;
-  width: 100%;
+  width: 40vw;
   border-radius: 5px;
 }
 
@@ -105,18 +107,34 @@ tr:nth-of-type(odd) td {
 }
 
 .gallery{
-    display: flex;
-    flex-wrap: nowrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  padding-top: 20px;
 }
 
-.main-gallery-image{
-    height: 500px;
+.image-box {
+  position: relative;
 }
 
-.side-gallery-image{
-    height: 250px;
+.image-box:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
 }
 
 .Distribution{
@@ -128,6 +146,7 @@ tr:nth-of-type(odd) td {
 .DistributionInfo{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .DistributionTable{
