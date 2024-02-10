@@ -1,4 +1,26 @@
-/* Andra stilar som tidigare */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#overlayImg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,17 +29,16 @@ body {
     padding: 0px;
     margin-inline: 10vw;
 }
+main {
+  margin: 20px 0;
+}
+
 hr{
   margin-block: 10px;
   height: 1px;
   border-width: 0;
   color:gray;
   background-color:gray
-}
-
-/* Add a black background color to the top navigation */
-main {
-  margin: 20px 0;
 }
 
 .topnav {
@@ -81,13 +102,13 @@ main {
 }
 
 .SystematikBox {
-  display: block;
+  display: block;  
   overflow: auto;
-  width: fit-content;
   padding-left: 5px;
   margin-block: 10px;
   border-radius: 5px;
   margin-right: 10px;
+  width: 50%; 
 }
 
 .SystematikTable{
@@ -110,7 +131,7 @@ tr:nth-of-type(odd) td {
 }
 
 .slothEatImg{
-  margin-top: 0px;
+  margin-top: 20px;
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -155,66 +176,23 @@ tr:nth-of-type(odd) td {
   grid-gap: 20px;
 }
 
-.Distribution{
+.distribution{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.DistributionInfo{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
 .DistributionTable{
   padding: 5px;
   font-size: 18px;
-  width: 0%;
+  width: 30%;
 }
+
 .DistributionTableBox{ 
-  width: 50vw;
+  width: 50%;
 }
 
 .DistributionImg{
-  width: 400px;
-  border-radius: 5px;
-}
-
-@media screen and (max-width: 1600px) {
-  img.slothEat{
-    margin-top: 30%;
-  }
-  div.infobox{
-    width: 40vw;
-  }
-}
-@media screen and (max-width: 1000px) {
-  div.infobox{
-    width: 60vw;
-  }
-}
-
-#overlay {
-  position: fixed;
-  display: none;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-}
-
-#overlayImg{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  color: white;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
+  border-radius: 5px;
 }
