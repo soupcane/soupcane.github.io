@@ -9,9 +9,9 @@
     <body>
         <header>
             <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="#textbox">News</a>
-                <a href="#infobox">Contact</a>
+                <a href="#TextBox">Genrel info</a>
+                <a href="#gallery">News</a>
+                <a href="#Gallery" class="scrollDownButton">Gallery</a>
                 <a href="#about">About</a>
               </div> 
         </header>
@@ -26,7 +26,8 @@
                     </h1>
                 </div>
 
-                <div class="textbox">
+                <div class="textbox" id="TextBox" >
+                    <a href="textbox"></a>
                     <p class="text1">
                         Sengångare är unika på många sätt. De tillbringar i stort sett hela sitt liv hängande upp och ned i sina kraftiga krökta klor. De äter, sover, parar sig och föder sina ungar i den ställningen. För att kunna klara av detta bildar klorna kraftiga klätterhakar och pälsen växer åt ”fel” håll för att leda undan regnvattnet.
                         <br><br>
@@ -94,6 +95,43 @@
             </div>
 
             <section>
+                <div>
+                    <div class="row">
+                        <div class="main-gallery-image">
+                            <img src="images/sloth-site-image1.jpg" alt="sloth image">
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery" id="Gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-container">
+
+                    <div class="image-box">
+                      <img src="images/experts-say-sloths-app.jpg" alt="Image 1">
+                    </div>
+                  
+                    <div class="image-box">
+                      <img src="images/babysloth.webp" alt="Image 2">
+                    </div>
+                  
+                    <div class="image-box">
+                      <img src="images/sloth-site-image1.jpg" alt="Image 3">
+                    </div>
+                
+                    <div class="image-box">
+                        <img src="images/plafs.jpg" alt="image 4">
+                    </div>
+                  
+                    <!-- Add more images here -->
+                  </div>
+        
+                  <script src="script.js"></script>
+            </section>
+            
+            <section>
                 <div class="Distribution">
                     <h1 style="font-size: 32px">Distribution</h1>
                     <div class="DistributionInfo">
@@ -125,7 +163,6 @@
                     </div>
                 </div>
             </section>
-
         </main>
         <footer>
             <p>&copy; 2023 Vår Webbsida. Alla rättigheter inte förbehållna.</p>

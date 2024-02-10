@@ -5,7 +5,8 @@ body {
     background-color: #f4f4f4;
     color: #333;
     padding: 0px;
-    margin-inline: 10vw;}
+    margin-inline: 10vw;
+
 
 /* Add a black background color to the top navigation */
 main {
@@ -40,6 +41,7 @@ main {
 
 .scrollDownButton{
   scroll-behavior: smooth;
+
 }
 
 .content {
@@ -69,11 +71,10 @@ main {
 }
 
 .SystematikBox {
+
   display: block;
   overflow: auto;
-  width: 35vw;
-  height: fit-content;
-  font-size: 18px;
+  width: fit-content;
   padding-left: 5px;
   margin-block: 10px;
   border-radius: 5px;
@@ -93,17 +94,16 @@ main {
   margin-top: 10px;
   width: 40vw;
   border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /*Info lista */
-tr td{
-  text-indent: 5px;
+dt, dd{
+  float: left;
 }
-tr td[scope="row"] {
-  font-weight: bold;
-}
-tr:nth-of-type(odd) td {
-  background-color:rgba(255, 255, 255, 0.801);
+dt{
+  clear:both;
+  font-weight: bold
 }
 
 .gallery{
@@ -135,40 +135,43 @@ tr:nth-of-type(odd) td {
   width: 100%;
   height: auto;
   transition: all 0.3s ease-in-out;
+
+.gallery{
+  padding-top: 20px;
 }
 
-.Distribution{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
 }
 
 .DistributionInfo{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
 }
 
-.DistributionTable{
-  margin-right: 10px;
-  padding: 5px;
-  font-size: 18px;
+.image-box:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
 }
 
-.DistributionImg{
-  width: 25vw;
+.image-box:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 1600px) {
-  img.slothEat{
-    margin-top: 30%;
-  }
-  div.infobox{
-    width: 40vw;
-  }
-}
-@media screen and (max-width: 1000px) {
-  div.infobox{
-    width: 60vw;
-  }
+.image-box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
 }
