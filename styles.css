@@ -6,7 +6,14 @@ body {
     color: #333;
     padding: 0px;
     margin-inline: 10vw;
-
+}
+hr{
+  margin-block: 10px;
+  height: 1px;
+  border-width: 0;
+  color:gray;
+  background-color:gray
+}
 
 /* Add a black background color to the top navigation */
 main {
@@ -31,7 +38,6 @@ main {
   .topnav a:hover {
     background-color: #04a72d;
     color: black;
-    transform: scale(1.2);
   }
   /* Add a color to the active/current link */
   .topnav a.active {
@@ -55,7 +61,12 @@ main {
 }
 
 .image{
-  background-color: aliceblue;
+  width: 50vw;
+}
+
+.slothHeader{
+  width: 100%;
+  border-radius: 5px;
 }
 
 .textbox {
@@ -67,11 +78,9 @@ main {
 .Systematik{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .SystematikBox {
-
   display: block;
   overflow: auto;
   width: fit-content;
@@ -90,24 +99,21 @@ main {
   border-color: white;
 }
 
-.slothEat{
-  margin-top: 10px;
-  width: 40vw;
+tr td{
+  text-indent: 5px;
+}
+tr td[scope="row"] {
+  font-weight: bold;
+}
+tr:nth-of-type(odd) td {
+  background-color:rgba(255, 255, 255);;
+}
+
+.slothEatImg{
+  margin-top: 0px;
+  width: 100%;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/*Info lista */
-dt, dd{
-  float: left;
-}
-dt{
-  clear:both;
-  font-weight: bold
-}
-
-.gallery{
-  padding-top: 20px;
 }
 
 .image-box {
@@ -121,9 +127,7 @@ dt{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  transition: all 0.3s ease-in-out;
 }
 
 .image-box:hover img {
@@ -134,10 +138,15 @@ dt{
 .image-box img {
   width: 100%;
   height: auto;
-  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
 
-.gallery{
-  padding-top: 20px;
+.main-gallery-imageBox{
+  width: 50vw;
+}
+
+.main-gallery-image{
+  width: 100%;
 }
 
 .gallery-container {
@@ -146,32 +155,66 @@ dt{
   grid-gap: 20px;
 }
 
-.DistributionInfo{
+.Distribution{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
-.image-box:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.DistributionInfo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.DistributionTable{
+  padding: 5px;
+  font-size: 18px;
+  width: 0%;
+}
+.DistributionTableBox{ 
+  width: 50vw;
+}
+
+.DistributionImg{
+  width: 400px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1600px) {
+  img.slothEat{
+    margin-top: 30%;
+  }
+  div.infobox{
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div.infobox{
+    width: 60vw;
+  }
+}
+
+#overlay {
+  position: fixed;
+  display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-  transition: all 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
 }
 
-.image-box:hover img {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
-
-.image-box img {
-  width: 100%;
-  height: auto;
-  transition: all 0.3s ease-in-out;
+#overlayImg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
 }
