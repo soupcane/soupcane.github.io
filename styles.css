@@ -6,9 +6,13 @@ body {
     color: #333;
     padding: 0px;
     margin-inline: 10vw;
-}
+
 
 /* Add a black background color to the top navigation */
+main {
+  margin: 20px 0;
+}
+
 .topnav {
   background-color: #683903;
   overflow: hidden;
@@ -37,10 +41,7 @@ body {
 
 .scrollDownButton{
   scroll-behavior: smooth;
-}
 
-main {
-  margin: 20px 0;
 }
 
 .content {
@@ -56,23 +57,42 @@ main {
 .image{
   background-color: aliceblue;
 }
-.imga {
-  position: relative;
-  width: 100%;
-}
 
 .textbox {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     padding-left: 10px;
 }
-.infobox {
+
+.Systematik{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.SystematikBox {
+
   display: block;
   overflow: auto;
   width: fit-content;
   padding-left: 5px;
-  margin-top: 5px;
-  background-color: white;
+  margin-block: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.SystematikTable{
+  padding: 5px;
+  width: 100%;
+}
+.SystematikTbody{
+  border-style: solid;
+  border-color: white;
+}
+
+.slothEat{
+  margin-top: 10px;
+  width: 40vw;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -85,14 +105,36 @@ dt{
   clear:both;
   font-weight: bold
 }
-dt span{
-  display: inline-block;
-  width: 70px;
+
+.gallery{
+  padding-top: 20px;
 }
-dd span{
-  display: inline-block;
-  margin-right: 5px;
+
+.image-box {
+  position: relative;
 }
+
+.image-box:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
 
 .gallery{
   padding-top: 20px;
@@ -104,8 +146,11 @@ dd span{
   grid-gap: 20px;
 }
 
-.image-box {
-  position: relative;
+.DistributionInfo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 }
 
 .image-box:hover::before {
